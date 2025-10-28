@@ -1,0 +1,19 @@
+
+inputs:
+  raw_dir: "data/raw"
+  dsld: "data/raw/SAMPLE_dsld_2023_2025.json"
+  amazon: "data/raw/SAMPLE_amazon.json"
+  knowde: "data/raw/SAMPLE_knowde.json"
+  internal: "data/raw/SAMPLE_internal.json"
+
+params:
+  synonyms_file: "rules/synonyms.csv"
+  units_file: "rules/units.csv"
+  targets_file: "workflow/targets.txt"
+
+outputs:
+  uc1_path: "data/curated/uc1_products.csv"
+  uc2_path: "data/curated/uc2_companies.csv"
+  quality_report_path: "reports/quality_report.csv"
+  manifest_path: "provenance/source_manifest.csv"
+  checksums_path: "provenance/checksums.txt"
