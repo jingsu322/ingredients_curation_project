@@ -1,0 +1,25 @@
+field,description,example
+source,Data source identifier; e.g.; 'DSLD';'Amazon';'Knowde';'Internal',DSLD
+source_record_id,Source-specific id (e.g.; asin; upcSku; URL slug),B06WRNG37C / 8 92985 00071 3
+product_name,Human-readable product or ingredient name,MycoAdrenal; Vitamin D3 + K2
+brand,Brand or company (retail brand),ecoNugenics; Dr. Berg Nutritionals
+company_name,Company/manufacturer name,Musim Mas Group; leosglutenfree.com
+link,Product page URL,https://...
+on_market,1 on-market; 0 off-market or unknown,1
+entry_date,Entry/first-seen date in source,2023-06-22
+form,Physical form e.g.; Capsule; Softgel; Powder,Capsule
+serving_size,Declared serving size count; as numeric,2
+serving_unit,Declared serving size unit e.g.; Capsule(s),Capsule(s)
+net_quantity,Count or mass per package; if available,60
+net_unit,Unit for net_quantity,Vegetarian Capsule(s)
+ingredients,Array of ingredient names (normalized),[...names...]
+other_ingredients,Array of 'other ingredients' or excipients,[...names...]
+dosage_value,Per-serving quantity for ingredient or blend,1500
+dosage_unit,Unit for dosage_value (canonical mass unit),mg
+dose_count_unit,Count units used in label context,Capsule(s)
+claims,Marketing/structure-function claims,Structure/Function
+statements,Regulatory or caution statements,FDA Disclaimer
+target_groups,Target groups,Adult; Vegan; Gluten free
+certifications,Certifications & compliance,Halal; Kosher; RSPO; ...
+ingredient_taxonomy,Botanical/INCI/Common name mapping,INCI: Caprylic/Capric Triglyceride
+provenance,Crawl time; hash; extractor notes,crawl_ts; sha256; extractor=...

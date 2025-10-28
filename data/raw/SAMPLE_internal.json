@@ -1,0 +1,300 @@
+[
+  {
+    "product_name": "Cavatelli Whole Grain, Gluten & Dairy Free",
+    "product_type": "Finished Product",
+    "ingredients": [
+      "Whole Grain Brown Rice Flour",
+      "Modified Tapioca Starch",
+      "Eggs",
+      "Xanthan Gum",
+      "Salt",
+      "Water"
+    ],
+    "company_name": "leosglutenfree.com",
+    "product_link": "https://leosglutenfree.com/cavatelli/",
+    "completion_tokens": 644,
+    "prompt_tokens": 841,
+    "total_tokens": 1485
+  },
+  {
+    "product_name": "Penne Whole Grain, Gluten & Dairy Free",
+    "product_type": "Finished Product",
+    "ingredients": [
+      "Whole Grain Brown Rice Flour",
+      "Modified Tapioca Starch",
+      "Eggs",
+      "Xanthan Gum",
+      "Salt",
+      "Water"
+    ],
+    "company_name": "leosglutenfree.com",
+    "product_link": "https://leosglutenfree.com/penne/",
+    "completion_tokens": 451,
+    "prompt_tokens": 838,
+    "total_tokens": 1289
+  },
+  {
+    "product_name": "Portobello Mushroom Ravioli - Leo's Gluten Free Pasta",
+    "product_type": "Finished Product",
+    "ingredients": [
+      "Whole Grain Brown Rice Flour",
+      "Modified Tapioca Starch",
+      "Eggs",
+      "Xanthan Gum",
+      "Salt",
+      "Water",
+      "Whole Milk Ricotta cheese (sweet whey, whole milk, sweet cream, culture, vinegar and salt)",
+      "Portobello Mushrooms",
+      "Parmesan Cheese (pasteurized part-skim cow\u2019s milk, cheese cultures, salt and enzymes)",
+      "Romano Cheese (pasteurized cow\u2019s milk, cheese cultures, salt, and enzymes)",
+      "Dehydrated Potatoes (100% Potatoes)",
+      "Natural Mushroom Base (sauteed mushroom, sea salt, butter (sweet cream, annato), yeast extract, natural flavorings, spice & vegetable extract)",
+      "Salt",
+      "Spices"
+    ],
+    "company_name": "leosglutenfree.com",
+    "product_link": "https://leosglutenfree.com/portobello-mushroom-ravioli/",
+    "completion_tokens": 1425,
+    "prompt_tokens": 990,
+    "total_tokens": 2415
+  },
+  {
+    "product_name": "Spinach & Cheese Ravioli",
+    "product_type": "Finished Product",
+    "ingredients": [
+      "DOUGH: Whole Grain Brown Rice Flour",
+      "Modified Tapioca Starch",
+      "Eggs",
+      "Xanthan Gum",
+      "Salt",
+      "Water",
+      "FILLING: Whole Milk Ricotta cheese (sweet whey, whole milk, sweet cream, culture, vinegar and salt)",
+      "Spinach",
+      "Asiago Cheese (pasteurized cow\u2019s milk, cheese culture, salt, and enzymes)",
+      "Parmesan Cheese (pasteurized part-skim cow\u2019s milk, cheese cultures, salt and enzymes)",
+      "Romano Cheese (pasteurized cow\u2019s milk, cheese cultures, salt, and enzymes)",
+      "Dehydrated Potatoes (100% Potatoes)",
+      "Salt",
+      "Spices"
+    ],
+    "company_name": "leosglutenfree.com",
+    "product_link": "https://leosglutenfree.com/spinach-cheese-ravioli/",
+    "completion_tokens": 1154,
+    "prompt_tokens": 992,
+    "total_tokens": 2146
+  },
+  {
+    "product_name": "Potato (Traditional) Gnocchi - Leo's Gluten Free Pasta",
+    "product_type": "Finished Product",
+    "ingredients": [
+      "Water",
+      "Dry Gnocchi Mix (modified food starch, potato flakes, potato flour, salt, brown rice flour, eggs, guar gum, xanthan gum, carob bean gum, mono and di-glycerides, lecithin, riboflavin)",
+      "Canola Oil"
+    ],
+    "company_name": "leosglutenfree.com",
+    "product_link": "https://leosglutenfree.com/potato-traditional-gnocchi/",
+    "completion_tokens": 941,
+    "prompt_tokens": 900,
+    "total_tokens": 1841
+  },
+  {
+    "product_name": "Lasagna Sheets",
+    "product_type": "Finished Product",
+    "ingredients": [
+      "Whole Grain Brown Rice Flour",
+      "Modified Tapioca Starch",
+      "Eggs",
+      "Xanthan Gum",
+      "Salt",
+      "Water"
+    ],
+    "company_name": "leosglutenfree.com",
+    "product_link": "https://leosglutenfree.com/lasagna-sheets/",
+    "completion_tokens": 701,
+    "prompt_tokens": 715,
+    "total_tokens": 1416
+  },
+  {
+    "product_name": "Linguini Whole Grain, Gluten & Dairy Free",
+    "product_type": "Finished Product",
+    "ingredients": [
+      "Whole Grain Brown Rice Flour",
+      "Modified Tapioca Starch",
+      "Eggs",
+      "Xanthan Gum",
+      "Salt",
+      "Water"
+    ],
+    "company_name": "leosglutenfree.com",
+    "product_link": "https://leosglutenfree.com/linguini-2/",
+    "completion_tokens": 1540,
+    "prompt_tokens": 837,
+    "total_tokens": 2377
+  },
+  {
+    "product_name": "Four Cheese Ravioli",
+    "product_type": "Finished Product",
+    "ingredients": [
+      "Whole Grain Brown Rice Flour",
+      "Modified Tapioca Starch",
+      "Eggs",
+      "Xanthan Gum",
+      "Salt",
+      "Water",
+      "Whole Milk Ricotta cheese (sweet whey, whole milk, sweet cream, culture, vinegar and salt)",
+      "Asiago Cheese (part skim milk, cheese cultures, salt, and enzymes)",
+      "Romano Cheese (pasteurized cow\u2019s milk, cheese cultures, salt, and enzymes)",
+      "Parmesan Cheese (pasteurized part-skim cow\u2019s milk, cheese cultures, salt and enzymes)",
+      "Dehydrated Potatoes (100% Potatoes)",
+      "Salt",
+      "Spices"
+    ],
+    "company_name": "leosglutenfree.com",
+    "product_link": "https://leosglutenfree.com/four-cheese-ravioli/",
+    "completion_tokens": 1522,
+    "prompt_tokens": 952,
+    "total_tokens": 2474
+  },
+  {
+    "product_name": "Portobello Mushroom Stuffed Gnocchi",
+    "product_type": "Finished Product",
+    "ingredients": [
+      "Water",
+      "Modified Food Starch",
+      "Potato Flakes",
+      "Salt",
+      "Brown Rice Flour",
+      "Eggs",
+      "Guar Gum",
+      "Xanthan Gum",
+      "Carob Bean Gum",
+      "Mono and Di-glycerides",
+      "Lecithin",
+      "Riboflavin",
+      "Whole Milk Ricotta cheese (sweet whey, whole milk, sweet cream, culture, vinegar and salt)",
+      "Portobello Mushrooms",
+      "Romano Cheese (part skim milk, cheese cultures, salt, and enzymes)",
+      "Natural Mushroom Base (sauteed mushroom, sea salt, butter (sweet cream, annatto))",
+      "yeast extract",
+      "natural flavorings",
+      "spice & vegetable extract",
+      "Parmesan Cheese (pasteurized part skim cow\u2019s milk, cheese cultures, salt, and enzymes)",
+      "Rice Flour",
+      "Salt",
+      "Spices"
+    ],
+    "company_name": "leosglutenfree.com",
+    "product_link": "https://leosglutenfree.com/portobello-mushroom-stuffed-gnocchi/",
+    "completion_tokens": 1462,
+    "prompt_tokens": 998,
+    "total_tokens": 2460
+  },
+  {
+    "product_name": "Elbow Macaroni \u2013 Rigati",
+    "product_type": "Finished Product",
+    "ingredients": [
+      "Whole Grain Brown Rice Flour",
+      "Modified Tapioca Starch",
+      "Eggs",
+      "Xanthan Gum",
+      "Salt",
+      "Water"
+    ],
+    "company_name": "leosglutenfree.com",
+    "product_link": "https://leosglutenfree.com/elbow-macaroni-rigati/",
+    "completion_tokens": 514,
+    "prompt_tokens": 860,
+    "total_tokens": 1374
+  },
+  {
+    "product_name": "Rotini Whole Grain, Gluten & Dairy Free",
+    "product_type": "Finished Product",
+    "ingredients": [
+      "Whole Grain Brown Rice Flour",
+      "Modified Tapioca Starch",
+      "Eggs",
+      "Xanthan Gum",
+      "Salt",
+      "Water"
+    ],
+    "company_name": "leosglutenfree.com",
+    "product_link": "https://leosglutenfree.com/rotini/",
+    "completion_tokens": 643,
+    "prompt_tokens": 838,
+    "total_tokens": 1481
+  },
+  {
+    "product_name": "Fettuccine",
+    "product_type": "Finished Product",
+    "ingredients": [
+      "Whole Grain Brown Rice Flour",
+      "Modified Tapioca Starch",
+      "Eggs",
+      "Xanthan Gum",
+      "Salt",
+      "Water"
+    ],
+    "company_name": "leosglutenfree.com",
+    "product_link": "https://leosglutenfree.com/fettuccine/",
+    "completion_tokens": 766,
+    "prompt_tokens": 844,
+    "total_tokens": 1610
+  },
+  {
+    "product_name": "Spaghetti - Leo's Gluten Free Pasta",
+    "product_type": "Finished Product",
+    "ingredients": [
+      "Whole Grain Brown Rice Flour",
+      "Modified Tapioca Starch",
+      "Eggs",
+      "Xanthan Gum",
+      "Salt",
+      "Water"
+    ],
+    "company_name": "leosglutenfree.com",
+    "product_link": "https://leosglutenfree.com/spaghetti/",
+    "completion_tokens": 834,
+    "prompt_tokens": 838,
+    "total_tokens": 1672
+  },
+  {
+    "product_name": "Butternut Squash Ravioli",
+    "product_type": "Finished Product",
+    "ingredients": [
+      "Whole Grain Brown Rice Flour",
+      "Modified Tapioca Starch",
+      "Eggs",
+      "Xanthan Gum",
+      "Salt",
+      "Water",
+      "Butternut Squash",
+      "Whole Milk Ricotta cheese (sweet whey, whole milk, sweet cream, culture, vinegar and salt)",
+      "Dehydrated Potatoes (100% potatoes)",
+      "Maple Syrup",
+      "Brown Sugar",
+      "Parmesan Cheese (pasteurized part-skim cow\u2019s milk, cheese cultures, salt and enzymes)",
+      "Salt",
+      "Spices"
+    ],
+    "company_name": "leosglutenfree.com",
+    "product_link": "https://leosglutenfree.com/butternut-squash-ravioli/",
+    "completion_tokens": 1313,
+    "prompt_tokens": 976,
+    "total_tokens": 2289
+  },
+  {
+    "product_name": "Spinach Gnocchi",
+    "product_type": "Finished Product",
+    "ingredients": [
+      "Water",
+      "Dry Gnocchi Mix (modified food starch, potato flakes, potato flour, salt, brown rice flour, eggs, guar gum, xanthan gum, carob bean gum, mono and di-glycerides, lecithin, riboflavin)",
+      "Spinach",
+      "Canola Oil"
+    ],
+    "company_name": "leosglutenfree.com",
+    "product_link": "https://leosglutenfree.com/spinach-gnocchi/",
+    "completion_tokens": 1122,
+    "prompt_tokens": 909,
+    "total_tokens": 2031
+  }
+]

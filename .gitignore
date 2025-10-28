@@ -8,3 +8,28 @@ wheels/
 
 # Virtual environments
 .venv
+
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+.env
+
+# Data (keep only small samples)
+data/raw/*
+!data/raw/SAMPLE_*.json
+!data/raw/README.md
+data/interim/*
+data/curated/*
+provenance/runs/*
+
+# OS / tools
+.DS_Store
+*.log
+
+# Large artifacts
+*.zip
+*.parquet
+*.sqlite

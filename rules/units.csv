@@ -1,0 +1,12 @@
+unit,canonical,quantity_type,to_mg,notes
+mg,mg,mass,1,
+milligram,mg,mass,1,synonym
+g,mg,mass,1000,
+gram,mg,mass,1000,synonym
+mcg,mg,mass,0.001,
+microgram,mg,mass,0.001,synonym
+IU,IU,activity,,Ingredient-specific; do not convert by default
+Capsule(s),count,count,,count unit
+Softgel(s),count,count,,count unit
+Tablet(s),count,count,,count unit
+Gram(s),mg,mass,1000,normalize DSLD label mass
