@@ -16,7 +16,7 @@ This project curates ingredient-centric knowledge for dietary supplements: given
 
 **Validate.** Partially implemented. A JSON Schema (`metadata/dataset.schema.json`) checks curated tables. A compact **quality report** is planned to track coverage, parsing success, and cross-source consistency.
 
-**Preserve & Disseminate.** On track. The repository is public—https://github.com/jingsu322/ingredients_curation_project—using `uv` for a pinned environment, with DataCite and `schema.org/Dataset` metadata underway. Final artifacts will include CSV/Parquet (optionally SQLite), checksums, and a “Reproduce in 5 steps.”
+**Preserve & Disseminate.** On track. The repository is public—https://github.com/jingsu322/ingredients_curation_project—using `uv` for a pinned environment, with DataCite and `schema.org/Dataset` metadata underway. Final artifacts will include CSV/Parquet (optionally SQLite), checksums, and a “Reproduce Guidance."
 
 ## Evidence of progress (artifacts)
 
@@ -37,25 +37,25 @@ These artifacts demonstrate concrete movement toward UC-1/UC-2 exports and the U
 - **Legal and policy constraints.** Redistribution follows a minimal, **samples-only** model with robots-aware acquisition, avoiding bulk page content and copyrighted media (Koster & Pebesma, 2022).
    No expansion of scope is required at this time; the successful Amazon access reduces risk. The project remains feasible within the remaining schedule.
 
-## Next steps (clear, actionable)
+## Next steps
 
-1. **Finish normalization & cleaning (M6).**
+1. **Finish normalization & cleaning.**
    - Implement parsing of serving size, net quantity, and per-ingredient amounts; apply `rules/units.csv` and `rules/synonyms.csv`.
    - Emit `reports/profiling.csv` and `logs/parse_failures.csv` for transparency.
-2. **Complete integration & identity (M6, M9).**
+2. **Complete integration & identity.**
    - Consolidate DSLD, Amazon, Knowde, and internal leads into a single integrated table.
    - Assign **UUIDv7** / hashes; preserve source IDs; write out `curation/company_links.csv` with confidence notes.
-3. **Validation & quality (M6, M8).**
+3. **Validation & quality.**
    - Finalize `metadata/dataset.schema.json`; add structural checks to the DAG.
    - Produce `reports/quality_report.csv` covering coverage, parsing success, and simple consistency tests.
 4. **Export views for UC-1 and UC-2.**
    - Generate `data/curated/uc1_products.csv` and `uc2_companies.csv`; include example queries and a small inspection notebook.
-5. **Standards & metadata (M11, M8).**
+5. **Standards & metadata.**
    - Complete **DataCite** fields and embed a `schema.org/Dataset` JSON-LD snippet in the README.
    - Expand `docs/codebook.csv` with concrete examples and cite sources for synonym lines (LanguaL/USDA ARS).
-6. **Reproducibility & dissemination (M12, M15).**
+6. **Reproducibility & dissemination.**
    - Finish the Snakemake DAG; capture run parameters, commit hashes, and checksums in `provenance/`.
-   - Tag a GitHub release and, if needed, publish a mirrored Zip for classroom submission.
+   - Tag a GitHub release and, if needed, publish a mirrored Zip for submission.
 
 ------
 

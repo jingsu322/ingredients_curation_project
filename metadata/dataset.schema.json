@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/ingredients-curation.schema.json",
+  "title": "Curated Record",
+  "type": "object",
+  "properties": {
+    "source": { "type": ["string","null"] },
+    "source_record_id": { "type": ["string","null"] },
+    "product_name": { "type": ["string","null"] },
+    "brand": { "type": ["string","null"] },
+    "company_name": { "type": ["string","null"] },
+    "link": { "type": ["string","null"] },
+    "on_market": { "type": ["integer","boolean","string","null"] },
+    "entry_date": { "type": ["string","null"] },
+    "form": { "type": ["string","null"] },
+    "serving_size": { "type": ["number","string","null"] },
+    "serving_unit": { "type": ["string","null"] },
+    "net_quantity": { "type": ["number","string","null"] },
+    "net_unit": { "type": ["string","null"] },
+    "ingredients": { "type": ["string","null"] },
+    "other_ingredients": { "type": ["string","null"] },
+    "claims": { "type": ["string","null"] },
+    "statements": { "type": ["string","null"] }
+  },
+  "required": ["source", "source_record_id", "product_name"],
+  "additionalProperties": true
+}

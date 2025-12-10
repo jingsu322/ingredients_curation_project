@@ -1,82 +1,102 @@
-# Use this Snakefile with:  uv run snakemake -j 4
-
+# Run: uv run snakemake -j 4
 configfile: "workflow/config.yaml"
 
-# Build the list of final outputs from config
-FINAL_UC1 = config["outputs"]["uc1_path"]
-FINAL_UC2 = config["outputs"]["uc2_path"]
-QUALITY   = config["outputs"]["quality_report_path"]
-MANIFEST  = config["outputs"]["manifest_path"]
-CHECKSUMS = config["outputs"]["checksums_path"]
-RUNMETA   = "provenance/runs/run_meta.json"
+DSLD_PQ     = config["outputs"]["dsld_parquet"]
+AMAZON_PQ   = config["outputs"]["amazon_parquet"]
+KNOWDE_PQ   = config["outputs"]["knowde_parquet"]
+INTERNAL_PQ = config["outputs"]["internal_parquet"]
+HARMONIZED  = config["outputs"]["harmonized"]
+INTEGRATED  = config["outputs"]["integrated"]
+UC1         = config["outputs"]["uc1_path"]
+UC2         = config["outputs"]["uc2_path"]
+QUALITY     = config["outputs"]["quality_report_path"]
+MANIFEST    = config["outputs"]["manifest_path"]
+CHECKSUMS   = config["outputs"]["checksums_path"]
+RUNMETA     = config["outputs"]["runmeta_path"]
 
 rule all:
     input:
         MANIFEST,
-        QUALITY,
-        FINAL_UC1,
-        FINAL_UC2,
-        CHECKSUMS,
-        RUNMETA
+        DSLD_PQ, AMAZON_PQ, KNOWDE_PQ, INTERNAL_PQ,
+        HARMONIZED, INTEGRATED,
+        QUALITY, UC1, UC2,
+        CHECKSUMS, RUNMETA
 
 rule manifest_raw:
-    """
-    Create a machine-readable manifest of raw inputs with size, sha256, and mtime.
-    This is transparency, not redistribution.
-    """
     input:
-        raw_dir = directory(config["inputs"]["raw_dir"])
+        raw_root = config["inputs"]["raw_root"]     # ← remove directory()
     output:
         MANIFEST
     shell:
-        "uv run python -m src.utils.provenance manifest --dir {input.raw_dir} --out {output}"
+        "uv run python -m src.utils.provenance manifest --dir {input.raw_root} --out {output}"
 
-rule profile_dsld:
-    """
-    Lightweight profiling of DSLD sample (missingness, counts, ranges).
-    """
+rule aggregate_dsld:
     input:
-        dsld = config["inputs"]["dsld"]
+        in_dir = config["inputs"]["dsld_dir"]       # ← remove directory()
     output:
-        "reports/profiling.csv"
+        DSLD_PQ
+    params:
+        bs = config["params"]["batch_size"],
+        on_market = " --only_on_market" if config["params"].get("only_on_market", False) else ""
     shell:
-        "uv run python -m src.preprocess.profile --in {input.dsld} --out {output}"
+        "uv run python -m src.preprocess.aggregate_dir --src dsld --in_dir {input.in_dir} --out {output} --batch_size {params.bs}{params.on_market}"
 
-rule harmonize:
-    """
-    Normalize ingredients and units into canonical shapes.
-    """
+rule aggregate_amazon:
     input:
-        dsld   = config["inputs"]["dsld"],
-        amazon = config["inputs"]["amazon"],
-        knowde = config["inputs"]["knowde"],
-        internal = config["inputs"]["internal"],
-        synonyms = config["params"]["synonyms_file"],
-        units    = config["params"]["units_file"]
+        in_dir = config["inputs"]["amazon_dir"]
     output:
-        "data/interim/harmonized.parquet"
+        AMAZON_PQ
+    params:
+        bs = config["params"]["batch_size"]
+    shell:
+        "uv run python -m src.preprocess.aggregate_dir --src amazon --in_dir {input.in_dir} --out {output} --batch_size {params.bs}"
+
+rule aggregate_knowde:
+    input:
+        in_dir = config["inputs"]["knowde_dir"]
+    output:
+        KNOWDE_PQ
+    params:
+        bs = config["params"]["batch_size"]
+    shell:
+        "uv run python -m src.preprocess.aggregate_dir --src knowde --in_dir {input.in_dir} --out {output} --batch_size {params.bs}"
+
+rule aggregate_internal:
+    input:
+        in_dir = config["inputs"]["internal_dir"]
+    output:
+        INTERNAL_PQ
+    params:
+        bs = config["params"]["batch_size"]
+    shell:
+        "uv run python -m src.preprocess.aggregate_dir --src internal --in_dir {input.in_dir} --out {output} --batch_size {params.bs}"
+
+
+
+# ------------------ Downstream pipeline (stubs you will replace) -----------
+rule harmonize:
+    input:
+        DSLD_PQ, AMAZON_PQ, KNOWDE_PQ, INTERNAL_PQ,
+        syn = config["params"]["synonyms_file"],
+        units = config["params"]["units_file"]
+    output:
+        HARMONIZED
     shell:
         ("uv run python -m src.preprocess.harmonize "
-         "--dsld {input.dsld} --amazon {input.amazon} --knowde {input.knowde} --internal {input.internal} "
-         "--syn {input.synonyms} --units {input.units} --out {output}")
+         f"--dsld {input[0]} --amazon {input[1]} --knowde {input[2]} --internal {input[3]} "
+         f"--syn {input.syn} --units {input.units} --out {output}")
 
 rule integrate:
-    """
-    Merge sources, anchor to DSLD/INCI where possible, and assign stable IDs.
-    """
     input:
-        "data/interim/harmonized.parquet"
+        HARMONIZED
     output:
-        "data/interim/integrated.parquet"
+        INTEGRATED
     shell:
         "uv run python -m src.integrate.merge --in {input} --out {output}"
 
 rule validate_curated:
-    """
-    Validate structure against JSON Schema and emit a compact quality report.
-    """
     input:
-        curated = "data/interim/integrated.parquet",
+        curated = INTEGRATED,
         schema  = "metadata/dataset.schema.json"
     output:
         QUALITY
@@ -84,22 +104,16 @@ rule validate_curated:
         "uv run python -m src.validate.checks --in {input.curated} --schema {input.schema} --out {output}"
 
 rule export_views:
-    """
-    Export UC-1 (Ingredient→Products) and UC-2 (Ingredient→Companies).
-    """
     input:
-        curated = "data/interim/integrated.parquet",
+        curated = INTEGRATED,
         targets = config["params"]["targets_file"]
     output:
-        uc1 = FINAL_UC1,
-        uc2 = FINAL_UC2
+        uc1 = UC1,
+        uc2 = UC2
     shell:
         "uv run python -m src.views.export --in {input.curated} --targets {input.targets} --uc1 {output.uc1} --uc2 {output.uc2}"
 
 rule run_meta:
-    """
-    Save run metadata: timestamp, git commit, python version, and config digest.
-    """
     input:
         cfg = "workflow/config.yaml"
     output:
@@ -108,11 +122,8 @@ rule run_meta:
         "uv run python -m src.utils.provenance runmeta --config {input.cfg} --out {output}"
 
 rule checksums:
-    """
-    Compute checksums for key deliverables (quality report and views).
-    """
     input:
-        QUALITY, FINAL_UC1, FINAL_UC2
+        QUALITY, UC1, UC2
     output:
         CHECKSUMS
     shell:

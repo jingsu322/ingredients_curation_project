@@ -1,19 +1,30 @@
-
 inputs:
-  raw_dir: "data/raw"
-  dsld: "data/raw/SAMPLE_dsld_2023_2025.json"
-  amazon: "data/raw/SAMPLE_amazon.json"
-  knowde: "data/raw/SAMPLE_knowde.json"
-  internal: "data/raw/SAMPLE_internal.json"
+  raw_root: "data/raw"                 # parent folder of all sources
+  dsld_dir: "data/raw/dsld_dataset"    # ~44k JSON labels (major source)
+  amazon_dir: "data/raw/amazon_dataset"
+  knowde_dir: "data/raw/knowde_dataset"
+  internal_dir: "data/raw/internal_dataset"
 
 params:
   synonyms_file: "rules/synonyms.csv"
   units_file: "rules/units.csv"
   targets_file: "workflow/targets.txt"
+  batch_size: 2000        
+  only_on_market: true    
 
 outputs:
+  dsld_parquet: "data/interim/dsld.parquet"
+  amazon_parquet: "data/interim/amazon.parquet"
+  knowde_parquet: "data/interim/knowde.parquet"
+  internal_parquet: "data/interim/internal.parquet"
+
+  harmonized: "data/interim/harmonized.parquet"
+  integrated: "data/interim/integrated.parquet"
+
   uc1_path: "data/curated/uc1_products.csv"
   uc2_path: "data/curated/uc2_companies.csv"
   quality_report_path: "reports/quality_report.csv"
+
   manifest_path: "provenance/source_manifest.csv"
   checksums_path: "provenance/checksums.txt"
+  runmeta_path: "provenance/runs/run_meta.json"
