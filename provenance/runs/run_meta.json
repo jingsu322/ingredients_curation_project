@@ -1,0 +1,16 @@
+{
+  "timestamp_utc": "2025-12-10T03:57:36.129400+00:00",
+  "git_commit": "6cc4c608215a46967d3def4ce26dd79e527959f1",
+  "python": "3.11.13",
+  "platform": "macOS-15.6.1-arm64-arm-64bit",
+  "argv": [
+    "/Users/jsu_m3/Desktop/MCS-UIUC/4-Fall2025-CS598_Foundations of Data Curation/project/ingredients_curation_project/src/utils/provenance.py",
+    "runmeta",
+    "--config",
+    "workflow/config.yaml",
+    "--out",
+    "provenance/runs/run_meta.json"
+  ],
+  "config_path": "workflow/config.yaml",
+  "config_sha256": "0b06a7a4c20e1e1bc35ad5f5e92e837763575f03df22ab8ce3ebb040ee1a0358"
+}

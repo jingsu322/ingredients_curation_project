@@ -17,13 +17,10 @@ __pycache__/
 .venv/
 .env
 
-# Data (keep only small samples)
+# Data files
 data/raw/*
-!data/raw/SAMPLE_*.json
-!data/raw/README.md
-data/interim/*
-data/curated/*
-provenance/runs/*
+
+
 
 # OS / tools
 .DS_Store
@@ -31,5 +28,5 @@ provenance/runs/*
 
 # Large artifacts
 *.zip
-*.parquet
+# *.parquet
 *.sqlite
