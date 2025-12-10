@@ -104,7 +104,7 @@ uv run snakemake -j 2 reports/quality_report.csv data/curated/uc1_products.csv d
 
 ------
 
-## Outputs (what to expect)
+## Outputs
 
 - **`data/interim/harmonized.parquet`**
    Concatenated and normalized records with:
