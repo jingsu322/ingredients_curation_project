@@ -1,0 +1,15 @@
+{
+  "types": { "resourceTypeGeneral": "Dataset", "resourceType": "Curated tabular + Parquet" },
+  "titles": [{ "title": "Ingredients Curation: Harmonized and Integrated Supplement Ingredients" }],
+  "creators": [{ "name": "Su, Jing" }],
+  "publisher": "Course project (UIUC CS598 Foundations of Data Curation)",
+  "publicationYear": 2025,
+  "descriptions": [{
+    "descriptionType": "Abstract",
+    "description": "This dataset harmonizes product and ingredient information from DSLD, Amazon, Knowde, and internal leads. It includes harmonized and integrated Parquet files, UC-specific CSV views, and quality metrics."
+  }],
+  "subjects": [{ "subject": "data curation" }, { "subject": "ingredients" }, { "subject": "provenance" }],
+  "rightsList": [{ "rights": "For research and teaching only. Respect each source's terms of use." }],
+  "version": "0.1.0",
+  "language": "en"
+}
